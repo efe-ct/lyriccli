@@ -1,4 +1,5 @@
 # Note everything is still in development
+# AI will be used to understand various syntax as this is my first CLI application
 # 🎤 LyricCLI
 
 **LyricCLI** is a cross-platform command-line application that lets you search, explore, and interact with song lyrics—right from your terminal.
