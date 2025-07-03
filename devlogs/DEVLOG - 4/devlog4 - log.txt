@@ -1,0 +1,51 @@
+Day 2
+DEVLOG - 4
+
+Since the env is being injected into index.js I want to work on the Search Feature I'll be testing it on index.js but maybe will change the directory structure to suit my preference when adding other functions/features call it what you want.
+Now we'll be using axios to try the search feature in index.js
+
+The work that was done on index js was pretty straight forward. I havent set up the client requests yet as that will be done towards finishing version 0, so this is just the work flow and i'll explain what it does.
+
+BEGIN
+-> Request using "<Artist Name>" <"Song name">  --<other options will be added later>
+-> Node (axios) processes it sends request to the Genius API to fetch the records related to the request
+-> Genius API expects ACCESS_TOKEN which has been provided as an environmental variable
+-> Genius API responds to the request given the records related to the <ArtistName> and <Song Name> given in the original request.
+END
+
+My thoughts on this;
+-> Just to tolerate what virtually anyone can do I want to see if it is possible to only search an artist or a song and it shows
+For only artist: shows their songs and maybe Albums then songs.
+For songs: Shows similarly names songs with their artist.
+
+In any case Here is the js and my comments
+
+``` js
+import axios from "axios"; //importing axios for api calls
+import dotenv from "dotenv"; //we all know this is for the .env file no explanation
+dotenv.config();
+
+const token = process.env.GENIUS_CLIENT_ACCESS_TOKEN; //token from the env file
+const query = process.argv.slice(2).join(" "); 
+// so for how the query will be passed
+// in the terminal I'd write something like node bin/index.js Ed Sheeran Photograph 
+
+async function searchSong(query) {
+  const res = await axios.get(`https://api.genius.com/search?q=${encodeURIComponent(query)}`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }); // we are basically using axios to sent a request (GET) to the APIs search endpoint(look at the url that was passed through if you dont know why its a search endpoint).
+  the query that is sent "Ed Sheeran Photograph and yes (Ed Sheeran is perfectly fine to use as an example)" passess through this carwash thingy(goes in dirty comes out clean). But in this case it goes is as for example the song name could be @Fire and it will be encoded to be %40Fire this is to ensure consistency because special characters have to be encoded
+
+  const hits = res.data.response.hits; //the respons data payload is stored in an array which is assigned to the hits constant
+  console.log(hits.map(hit => hit.result.full_title)); //for each hit that is printed it is provided with its full title.
+}
+
+searchSong(query) //the function is called
+````
+
+It may not be too easy if you're not familiar with it so here is what is going on in laymans terms.
+axios says Hi Genius(via API), give me all the results for this search. Now show me just their titles so the console can list them out.
+In the following devlog I will continue trying to make it better maybe try to add some styling or maybe push it forward till when more of the project comes together. Still haven't added more the the directory to separate various things. will do in the future.
+I will close the devlog for Today. See you on Day 3.
