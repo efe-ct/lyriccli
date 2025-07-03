@@ -1,0 +1,11 @@
+Day 2 - Devlog2 (it's the first devlog of the day but I am not starting from one just trying to document it the best I can )
+
+Just preparing project and right now, I just had AI just generate a PRD (Product Requirements Document). For those who don't know it's basically like a planning document used in product development that is used to clearly define what a product should do, why it should do it, and success will be measured. I ended up tinkering with it in many ways to suit some of the ideas I had in mind. I already stated it was AI generated and the reason for that is that sometimes when working on a flow(flowchart, conditions etc) escpecially when planning you tend to miss out some minor or little details which play a significant role to how the flow is going to run, this was also to make the theoretical aspect more tangible. Try it when preparing a project.
+
+From the day before I already installed axios, chalk, inquirer and commander. To start up today I am going to be installing additional depedencies like @clack/prompts, figlet and gradient-string. After watching come tutorials and even using cli's like Vite's Create React App (CRA) and some other CLIs you may know. I wanted to add some style to it.
+
+I moved on to setting up the project structure. I watched a little setting up of CLI structures on YouTube: https://www.youtube.com/watch?v=rJKRhPI6V9c, https://www.youtube.com/watch?v=GupmEQFkDJM checkout the videos if you are interested in creating simple cli's. I already have knowledge of JavaScript form practice with the native also React and Angular so didn't check for videos unless I wasn't really sure of it or needed clarification.
+
+Just created the index.js file in the bin directory. Its my preference to separate it and it is quite common you should try it. Added the bin and index to the package.json directory. 
+
+I will begin creating the first command which will use the https://lyrics.ovh/(Lyrics.ovh) API will be on the next devlog.

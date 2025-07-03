@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+  "lyriccli": "bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +14,12 @@
   "license": "MIT",
   "type": "commonjs",
   "dependencies": {
+    "@clack/prompts": "^0.11.0",
     "axios": "^1.10.0",
     "chalk": "^5.4.1",
     "commander": "^14.0.0",
+    "figlet": "^1.8.1",
+    "gradient-string": "^3.0.0",
     "inquirer": "^12.7.0"
   }
 }
