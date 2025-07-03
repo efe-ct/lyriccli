@@ -1,3 +1,4 @@
 node_modules/
 requirements_notes.txt
 prd_roadmap_checklist.md
+.env

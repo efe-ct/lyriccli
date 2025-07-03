@@ -1,0 +1,15 @@
+Day 2
+DEVLOG - 3
+
+I will begin creating the first command which will use the https://lyrics.ovh/(Lyrics.ovh) API. You can check out the site.
+
+After trying the code they gave in the api page and testing out their site. I have come to the conclusion that their API doesn't work so I will be trying genius.org https://docs.genius.com/#/getting-started-h1
+I didn't know what to put as the app url so i gave it the npmjs URL https://www.npmjs.com/
+
+I got the environmental variables and no you cannot see it. Also I dont know how it skipped my mind to this point but I forgot to install the dotenv dependency.
+By the way please never forget to use type: module if you are going to be using import instead of the commonjs require I thought it was something else until I checked again.
+So the env works. It is kinda annoying to document every single step although I am not doing it professionally i'll learn as I move on.
+
+I just took a snapshot for the checking of the env to see if the code sees it just a simple console.log and I advise anyone to take things just simply and break everything into the simple steps.
+Moving on to DEVLOG - 4
+
