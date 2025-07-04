@@ -1,0 +1,19 @@
+Day 3
+DEVLOG - 5
+
+Good day everyone
+Today I will be doing a variety of things and more what I want to implement will be the;
+    -> Adding an ASCII header using figlet
+        -> Using the gradient-string to add color
+    -> Trying to make the prompts interactive using clack and inquirer
+
+I will probably separate them into different devlogs or maybe an idea may come in and I could get sidetracked so I had to note it, but I'll be careful.
+
+Before all that happens I ran `npm link` so the lyriccli actually works this time.
+
+After a lot of stuggling I the lyriccli package was linked to npm as a global package and I started testing. I made some changes to the index.js I know I said I will update the direcotry to make the functions more modular but i'll still put that aside because I want everything to work
+I realized after a while that my current setup meant that the env had to be access in the directory locally. I dont really know how to say it any other way but in laymanns terms if I use lyric cli outside of the project directory the env wont be acessible. I think I will have to put an absolute path to the env in the index.js or with the search script i'll do that once I have figured somethings out
+Some code has changed you can take a look at the previous commit and compare
+
+CHECK OUT THE VIDEO
+sorry in advance for the camera skills

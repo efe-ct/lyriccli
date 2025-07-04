@@ -1,4 +1,7 @@
 node_modules/
+.vscode/
+
 requirements_notes.txt
 prd_roadmap_checklist.md
 .env
+IDEA.md
