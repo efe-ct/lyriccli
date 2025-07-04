@@ -1,0 +1,19 @@
+Day 3 & 4
+DEVLOG - 6 Part 1
+
+Hey guys its still day three but I am probably not going to finish this devlog today so I will just upload this section and do the remaining tomorrow. First of all the work I am doing is going to be out of vscode because I started structuring the project a bit to make everything more modular separating functions and making it more detailed. I will show that in the part two of Devlog 6.
+So as I said in the extra video I uploaded I started working on the n8n workflow to try and get the lyric responses. I had two ideas in mind
+
+1. from the song the user selects -> Using an Ai Agent fetch the lyrics (it seems the simplest but I can't really be confident of the language repsonses e.g if said user selected Russian lyrics which is highely unlivelky but I have to address all areas). --currently working on this approach until i get the project direcotry ready I will test the workflow using a Chat input
+2. I wanted to use a web scraper api so it will work even better with the genius urls it will give out and scrape data off the page and I will set the formatting this way responses will be more genuine.
+extra. ai agent + webscraper (probably sounds dumb but it could probably work) I will show the n8n workflow in a video.
+
+By the way I am using deepseek/deepseek-chat-v3-0324:free provided by OpenRouter the context is enough for this workflow. You can check it out @ https://openrouter.ai/deepseek/deepseek-chat-v3-0324:free 
+If you'd like a free one with more context you can check out deepseek/deepseek-r1-0528:free @ https://openrouter.ai/deepseek/deepseek-r1-0528:free you could also use the paid ones if you'd like more reasoning. I'm sticking to the free one because of how simple the task I am using is just goota provide it with enough context.
+
+So thats it for part one see you guys tomorrow, this has been devlog 6 part 1, project directory changes (project is a little broken) thank fully I have a backup branch
+
+during the video if you check out the workflow you'd notice it was a bit slow and this is because of hardware limitations. I will be moving it to my n8n cloud instance once I am sure it is ready that will make it quicker
+also the lyrics were in my opinion not as accurate as the ones on genius but I was still very accurate thats why I think implementing a scraper api but we'll see moving on.
+
+If you have any suggestions please feel free to say.
