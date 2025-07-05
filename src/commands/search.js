@@ -6,13 +6,16 @@ dotenv.config();
 const token = process.env.GENIUS_CLIENT_ACCESS_TOKEN;
 
 export async function searchSong(query) {
+  //token and query validation
   if (!query) {
     console.error('❌ Please provide a search query.');
+    console.log("Search command: lyriccli <song name> <artist name>");
     return;
   }
 
   if (!token) {
-    console.error('❌ Missing Genius token.');
+    console.error('❌ Missing Genius access token.');
+    console.log("Please add your Genius API token to your .env file");
     return;
   }
 
@@ -21,7 +24,7 @@ export async function searchSong(query) {
     const res = await axios.get(`https://api.genius.com/search?q=${encodeURIComponent(query)}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
-
+    // logic to give users feedback (no search results)
     const hits = res.data.response.hits;
     if (hits.length === 0) {
       console.log('❌ No results found.');
